@@ -1,0 +1,87 @@
+/* --- RESET & BASES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+
+/* --- HERO SECTION (PLUS COURTE) --- */
+.hero {
+    height: 30vh; /* CHANGEMENT ICI : Beaucoup moins haut */
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid #e94560;
+}
+.hero h1 { font-size: 3rem; color: #fff; margin-bottom: 5px; }
+.hero h2 { font-size: 1.2rem; color: #e94560; font-weight: 300; margin-bottom: 15px; }
+.tagline { font-style: italic; opacity: 0.8; margin-bottom: 20px; }
+.btn-cta {
+    background-color: #e94560; color: white; padding: 10px 25px;
+    border-radius: 30px; font-weight: bold; transition: transform 0.3s;
+}
+.btn-cta:hover { transform: scale(1.05); background-color: #ff2e63; }
+
+/* --- CONTENEUR --- */
+.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+.section-title {
+    font-size: 1.8rem; text-align: center; margin: 40px 0 30px 0;
+    border-bottom: 2px solid #e94560; display: inline-block; padding-bottom: 5px;
+}
+
+/* --- COMPETENCES (COULEURS INVERSÉES) --- */
+.skills-container {
+    background-color: #16213e; padding: 25px;
+    border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.skill-box { margin-bottom: 20px; }
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+.progress-bg { width: 100%; height: 10px; background-color: #0f3460; border-radius: 10px; overflow: hidden; }
+.progress-bar { height: 100%; border-radius: 10px; width: 0; animation: loadBar 2s ease-out forwards; }
+
+/* NOUVELLES COULEURS */
+.python { width: 75%; background-color: #20bf6b; } /* VERT (Fort) */
+.sql { width: 70%; background-color: #20bf6b; animation-delay: 0.2s; } /* VERT */
+.htmlcss { width: 45%; background-color: #f7b731; animation-delay: 0.4s; } /* ORANGE (Moyen) */
+.flutter { width: 15%; background-color: #eb4d4b; animation-delay: 0.6s; } /* ROUGE (Faible) */
+
+@keyframes loadBar { from { width: 0; } }
+
+/* --- NOUVEAU : ACCOMPLISSEMENTS (GRILLE) --- */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* S'adapte auto */
+    gap: 20px;
+}
+.achieve-card {
+    background-color: #16213e; padding: 20px; border-radius: 10px;
+    text-align: center; transition: transform 0.3s; border: 1px solid #0f3460;
+}
+.achieve-card:hover { transform: translateY(-5px); border-color: #e94560; }
+.achieve-card .icon { font-size: 2rem; margin-bottom: 10px; }
+.achieve-card h3 { color: #e94560; margin-bottom: 10px; font-size: 1.1rem; }
+.achieve-card p { font-size: 0.85rem; color: #a0a0a0; }
+
+/* --- EXPERIENCES --- */
+.exp-card {
+    background-color: #16213e; padding: 20px; margin-bottom: 20px;
+    border-radius: 10px; border-left: 4px solid #e94560; transition: transform 0.3s;
+}
+.exp-card:hover { transform: translateX(10px); }
+.exp-date {
+    background-color: #e94560; color: white; display: inline-block;
+    padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-bottom: 8px;
+}
+.exp-card h3 { font-size: 1.2rem; margin-bottom: 2px; }
+.exp-card h4 { color: #a0a0a0; font-weight: 300; font-size: 0.9rem; margin-bottom: 10px; }
+.exp-card ul { padding-left: 20px; list-style-type: disc; color: #ccc; font-size: 0.9rem; }
+
+/* --- FOOTER --- */
+footer { background-color: #0f3460; text-align: center; padding: 40px 20px; margin-top: 40px; }
+.contact-link { display: inline-block; background: white; color: #0f3460; padding: 8px 20px; border-radius: 5px; font-weight: bold; margin: 10px 0; }
+.copyright { margin-top: 20px; font-size: 0.7rem; opacity: 0.5; }
