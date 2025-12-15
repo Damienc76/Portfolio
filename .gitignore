@@ -1,0 +1,7 @@
+# Fichiers de configuration de l'éditeur (VS Code, etc.)
+.vscode/
+
+# Fichiers de cache / temporaires
+*.log
+*.tmp
+*.DS_Store
